@@ -1,19 +1,21 @@
 package main
 
 import (
+	"go_managing_projects/src/calc"
 	"fmt"
 )
 
 /*
- The function "Discount" isn't imported from the calc package, but it's available to the main function.
- It's because both the functions are in the same package "main" and the same directory.
+ The function "calc.Discount" is imported from the "calc" package. The "calc" package is located in the "src" folder.
+ The "src" folder is located in the "go_managing_projects" folder. It's important to note that the "go_managing_projects"
+ because it's the root folder of the project and I don't use GOPATH, so I need to specify the root folder of the project.
 */
 
 // The main function calculates the total discount based on the item price and discount percentage.
 func main() {
 	var itemPrice, itemDiscount int = 50, 10
 
-	totalDiscount := Discount(itemPrice, itemDiscount)
+	totalDiscount := calc.Discount(itemPrice, itemDiscount)
 	fmt.Println("Item Price:      ", itemPrice)
 	fmt.Println("Item Discount %: ", itemDiscount)
 	fmt.Println("Total Discount:  ", totalDiscount)

@@ -1,4 +1,4 @@
-package main
+package calc
 
 // The Plus function in Go takes two integers as input and returns their sum.
 func Plus(a, b int) int {
