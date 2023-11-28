@@ -13,7 +13,9 @@ import (
 
 // The main function calculates the total discount based on the item price and discount percentage.
 func main() {
-	var itemPrice, itemDiscount int = 50, 10
+	var itemPrice int = 50
+	// If you comment this line, the default value of the "itemDiscount" variable will be used.
+	itemDiscount = changeDiscount(20) // The function "changeDiscount" is imported from the "defaults.go" file.
 
 	totalDiscount := calc.Discount(itemPrice, itemDiscount)
 	fmt.Println("Item Price:      ", itemPrice)
