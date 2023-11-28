@@ -15,7 +15,8 @@ import (
 func main() {
 	var itemPrice int = 50
 	// If you comment this line, the default value of the "itemDiscount" variable will be used.
-	itemDiscount = DefaultsChangeDiscount(20) // The function "changeDiscount" is imported from the "defaults.go" file.
+	itemDiscount = DefaultsChangeDiscount(20) // The function "DefaultsChangeDiscount" is from the "defaults.go" file.
+	itemDiscount = DefaultsRandomNumber() // The function "DefaultsRandomNumber" is from the "defaults.go" file.
 
 	totalDiscount := calc.Discount(itemPrice, itemDiscount)
 	fmt.Println("Item Price:      ", itemPrice)
