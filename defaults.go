@@ -7,6 +7,14 @@ import (
 var itemDiscount int = 10 // global variable
 
 /*
+Init function is executed only once and in alfabetic order. In this case the init function is executed before the main function.
+Init functions are used to initialize global variables or to execute some code before the main function.
+*/
+func init() {
+	println("defaults.go initialized")
+}
+
+/*
 The function "changeDiscount" updates the value of the "itemDiscount" variable and returns the
 updated value. Is important use the convention of the name of the function, in this case the name of the function is "DefaultsChangeDiscount"
 because Default is the name of the file and ChangeDiscount is the name of the function.

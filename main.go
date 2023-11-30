@@ -5,6 +5,10 @@ import (
 	"fmt"
 )
 
+func init() {
+	println("main.go initialized")
+}
+
 /*
  The function "calc.Discount" is imported from the "calc" package. The "calc" package is located in the "src" folder.
  The "src" folder is located in the "go_managing_projects" folder. It's important to note that the "go_managing_projects"
