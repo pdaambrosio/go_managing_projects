@@ -1,8 +1,9 @@
 package main
 
 import (
-	"go_managing_projects/src/calc"
 	"fmt"
+	"go_managing_projects/src/calc"
+	"github.com/pioz/faker"
 )
 
 func init() {
@@ -22,8 +23,10 @@ func main() {
 	itemDiscount = DefaultsChangeDiscount(20) // The function "DefaultsChangeDiscount" is from the "defaults.go" file.
 	itemDiscount = DefaultsRandomNumber() // The function "DefaultsRandomNumber" is from the "defaults.go" file.
 
+	Symbol := faker.CurrencySymbol()
+
 	totalDiscount := calc.Discount(itemPrice, itemDiscount)
-	fmt.Println("Item Price:      ", itemPrice)
+	fmt.Println("Item Price:      ", Symbol, itemPrice)
 	fmt.Println("Item Discount %: ", itemDiscount)
-	fmt.Println("Total Discount:  ", totalDiscount)
+	fmt.Println("Total Discount:  ", Symbol, totalDiscount)
 }
