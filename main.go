@@ -24,9 +24,12 @@ func main() {
 	itemDiscount = DefaultsRandomNumber() // The function "DefaultsRandomNumber" is from the "defaults.go" file.
 
 	Symbol := faker.CurrencySymbol()
+	Color := faker.ColorName()
 
 	totalDiscount := calc.Discount(itemPrice, itemDiscount)
-	fmt.Println("Item Price:      ", Symbol, itemPrice)
+	fmt.Println("\nItem Price:      ", Symbol, itemPrice)
 	fmt.Println("Item Discount %: ", itemDiscount)
 	fmt.Println("Total Discount:  ", Symbol, totalDiscount)
+	fmt.Println("Color:           ", Color)
 }
+git
